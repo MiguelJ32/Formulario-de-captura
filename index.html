@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Captura - Encuesta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="contenedor-formulario">
+        <header class="encabezado-encuesta">
+            <h1>Encuesta de Tecnologías Ciudadanas</h1>
+            <p>Por favor, completa los siguientes campos para registrar tu participación.</p>
+        </header>
+
+        <form action="#" method="post" id="form-encuesta">
+
+            <!-- SECCIÓN 1: DATOS PERSONALES -->
+            <fieldset>
+                <legend>1. Datos Personales</legend>
+
+                <div class="grupo-campo">
+                    <label for="nombre_pila">Nombre(s):</label>
+                    <input type="text" id="nombre_pila" name="nombre_pila" required placeholder="Ej. Juan">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="apellido_paterno">Apellido Paterno:</label>
+                    <input type="text" id="apellido_paterno" name="apellido_paterno" required placeholder="Ej. Pérez">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="apellido_materno">Apellido Materno:</label>
+                    <input type="text" id="apellido_materno" name="apellido_materno" required placeholder="Ej. López">
+                </div>
+
+                <div class="grupo-doble">
+                    <div class="grupo-campo">
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" name="edad" min="15" max="100" required placeholder="Ej. 25">
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="genero">Género:</label>
+                        <select id="genero" name="genero" required>
+                            <option value="">-- Selecciona --</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="otro">Otro / Prefiero no decir</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- SECCIÓN 2: PREGUNTAS DE SELECCIÓN MÚLTIPLE -->
+            <fieldset>
+                <legend>2. Preguntas de Preferencias</legend>
+
+                <div class="grupo-opciones">
+                    <p class="pregunta-titulo">¿Cuál es tu sistema operativo favorito?</p>
+                    <label class="opcion-inline">
+                        <input type="radio" name="os" value="windows" required> Windows
+                    </label>
+                    <label class="opcion-inline">
+                        <input type="radio" name="os" value="macos"> MacOS
+                    </label>
+                    <label class="opcion-inline">
+                        <input type="radio" name="os" value="linux"> Linux
+                    </label>
+                </div>
+
+                <div class="grupo-opciones">
+                    <p class="pregunta-titulo">¿Qué tecnologías utilizas actualmente? (Selecciona todas las que correspondan):</p>
+                    <label class="opcion-inline">
+                        <input type="checkbox" name="tech" value="html"> HTML
+                    </label>
+                    <label class="opcion-inline">
+                        <input type="checkbox" name="tech" value="css"> CSS
+                    </label>
+                    <label class="opcion-inline">
+                        <input type="checkbox" name="tech" value="javascript"> JavaScript
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- SECCIÓN 3: COMENTARIOS FINALES -->
+            <fieldset>
+                <legend>3. Comentarios Finales</legend>
+
+                <div class="grupo-campo">
+                    <label for="comments">Escribe tus observaciones o sugerencias:</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Escribe aquí tus comentarios..."></textarea>
+                </div>
+            </fieldset>
+
+            <!-- BOTONES -->
+            <div class="contenedor-botones">
+                <button type="reset" class="btn btn-secundario">Limpiar</button>
+                <button type="submit" class="btn btn-primario">Enviar Encuesta</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>
